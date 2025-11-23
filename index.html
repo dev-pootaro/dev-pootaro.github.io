@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pootaro Suzuki | Portfolio</title>
+    <meta name="description" content="Pootaro Suzuki (鈴木 風太郎) - Free Actor & App Engineer Portfolio">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config for Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        montserrat: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            text: '#f8fafc',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-text font-sans antialiased selection:bg-brand-primary selection:text-white min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <header class="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl -z-10"></div>
+
+        <!-- Avatar / Initials -->
+        <div class="animate-fade-in w-32 h-32 rounded-full bg-gradient-to-br from-brand-primary to-brand-accent p-1 shadow-2xl mb-6">
+            <div class="w-full h-full rounded-full bg-brand-dark flex items-center justify-center text-4xl font-bold font-montserrat tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">
+                <img src="./profile.svg" alt="logo" class="w-full h-full object-cover rounded-full" />
+            </div>
+        </div>
+
+        <!-- Name & Title -->
+        <h1 class="animate-fade-in delay-100 text-4xl sm:text-5xl md:text-6xl font-extrabold font-montserrat tracking-tight mb-2">
+            Pootaro Suzuki
+        </h1>
+        <h2 class="animate-fade-in delay-100 text-xl text-brand-muted font-medium mb-6">
+            鈴木 風太郎
+        </h2>
+
+        <!-- Current Status Badge -->
+        <div class="animate-fade-in delay-200 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-card border border-brand-primary/30 text-brand-primary text-sm font-semibold mb-8">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-primary"></span>
+            </span>
+            Freelance
+        </div>
+
+        <!-- Comment / Bio -->
+        <p class="animate-fade-in delay-200 text-xl sm:text-2xl font-light max-w-2xl mx-auto leading-relaxed text-brand-text/90 italic">
+            "I'm free Actor and free App Engineer."
+        </p>
+
+        <!-- Social Links -->
+        <div class="animate-fade-in delay-300 flex gap-6 mt-10">
+            <a href="https://x.com/pootaro_suzuki?s=21&t=qlsI2_ipGs-QVSbE85oM7w" target="_blank" rel="noopener noreferrer" 
+               class="group relative p-4 bg-brand-card rounded-xl border border-gray-700 hover:border-brand-primary transition-all duration-300 hover:bg-brand-card/80">
+                <i class="fa-brands fa-x-twitter text-2xl group-hover:text-brand-primary transition-colors"></i>
+                <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">X (Twitter)</span>
+            </a>
+            <a href="https://note.com/pootaro_suzuki" target="_blank" rel="noopener noreferrer"
+               class="group relative p-4 bg-brand-card rounded-xl border border-gray-700 hover:border-brand-accent transition-all duration-300 hover:bg-brand-card/80">
+                <i class="fa-solid fa-pen-nib text-2xl group-hover:text-brand-accent transition-colors"></i>
+                <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">note</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <main class="flex-grow w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h3 class="text-2xl font-bold mb-8 border-l-4 border-brand-primary pl-4 flex items-center gap-3">
+            <i class="fa-solid fa-code text-brand-primary"></i>
+            Technical Skills
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Category: Languages -->
+            <div class="glass-card rounded-2xl p-6 hover:bg-brand-card/50 transition-colors">
+                <h4 class="text-lg font-semibold text-brand-accent mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-language w-6"></i> Languages
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag px-3 py-1 rounded-md bg-blue-900/40 text-blue-200 border border-blue-700/50 text-sm">Java</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-indigo-900/40 text-indigo-200 border border-indigo-700/50 text-sm">PHP</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-yellow-900/30 text-yellow-200 border border-yellow-700/50 text-sm">Python</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-yellow-900/40 text-yellow-100 border border-yellow-600/50 text-sm">JavaScript</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-blue-900/60 text-blue-100 border border-blue-600/50 text-sm">TypeScript</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-orange-900/40 text-orange-200 border border-orange-700/50 text-sm">HTML</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-sky-900/40 text-sky-200 border border-sky-700/50 text-sm">CSS/SCSS</span>
+                </div>
+            </div>
+
+            <!-- Category: Frameworks (Frontend) -->
+            <div class="glass-card rounded-2xl p-6 hover:bg-brand-card/50 transition-colors">
+                <h4 class="text-lg font-semibold text-brand-accent mb-4 flex items-center gap-2">
+                    <i class="fa-brands fa-react w-6"></i> Frontend Frameworks
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag px-3 py-1 rounded-md bg-red-900/40 text-red-200 border border-red-700/50 text-sm">Angular</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-red-900/20 text-red-300 border border-red-800/30 text-sm">AngularJS</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-cyan-900/40 text-cyan-200 border border-cyan-700/50 text-sm">React</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-green-900/40 text-green-200 border border-green-700/50 text-sm">Vue.js</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-gray-700/50 text-gray-200 border border-gray-500/50 text-sm">Next.js</span>
+                    <span class="skill-tag px-3 py-1 rounded-md bg-cyan-900/20 text-cyan-300 border border-cyan-800/50 text-sm">React Native</span>
+                </div>
+            </div>
+
+            <!-- Category: Frameworks (Backend) -->
+            <div class="glass-card rounded-2xl p-6 hover:bg-brand-card/50 transition-colors">
+                <h4 class="text-lg font-semibold text-brand-accent mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-server w-6"></i> Backend Frameworks
+                </h4>
+                <div class="space-y-3">
+                    <div>
+                        <span class="text-xs text-brand-muted uppercase tracking-wider mb-1 block">Java</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-md bg-green-900/30 text-green-200 border border-green-700/50 text-sm">Spring Boot</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700 text-sm">JSF</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700 text-sm">Struts</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700 text-sm">JPA/Hibernate</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700 text-sm">Mybatis</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700 text-sm">Doma</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-purple-900/40 text-purple-200 border border-purple-700/50 text-sm">Quarkus</span>
+                        </div>
+                    </div>
+                    <div class="pt-2 border-t border-gray-700/50">
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="skill-tag px-3 py-1 rounded-md bg-red-900/30 text-red-200 border border-red-700/50 text-sm">CakePHP</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-green-900/30 text-green-200 border border-green-700/50 text-sm">Django</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-orange-900/30 text-orange-200 border border-orange-700/50 text-sm">Serverless</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Infrastructure & Tools -->
+            <div class="glass-card rounded-2xl p-6 hover:bg-brand-card/50 transition-colors">
+                <h4 class="text-lg font-semibold text-brand-accent mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-cloud w-6"></i> Infrastructure & DB
+                </h4>
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <span class="text-xs text-brand-muted uppercase tracking-wider mb-1 block">Cloud / OS</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-md bg-orange-500/20 text-orange-200 border border-orange-500/50 text-sm"><i class="fa-brands fa-aws mr-1"></i> AWS</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-700 text-gray-200 border border-gray-600 text-sm">UNIX</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-700 text-gray-200 border border-gray-600 text-sm"><i class="fa-brands fa-linux mr-1"></i> Linux</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-muted uppercase tracking-wider mb-1 block">Database</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-md bg-blue-900/30 text-blue-200 border border-blue-700/50 text-sm">PostgreSQL</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-blue-900/30 text-blue-200 border border-blue-700/50 text-sm">MySQL</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-blue-900/30 text-blue-200 border border-blue-700/50 text-sm">SQL Server</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-muted uppercase tracking-wider mb-1 block">Dev Tools</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-600 text-sm"><i class="fa-brands fa-github mr-1"></i> GitHub</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-orange-900/20 text-orange-200 border border-orange-700/50 text-sm"><i class="fa-brands fa-gitlab mr-1"></i> GitLab</span>
+                            <span class="skill-tag px-3 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-600 text-sm">Subversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-8 border-t border-gray-800 text-center text-brand-muted text-sm">
+        <div class="max-w-5xl mx-auto px-4">
+            <p class="mb-2">&copy; <span id="year"></span> Pootaro Suzuki. All rights reserved.</p>
+            <p class="text-xs opacity-60">Designed with Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
